@@ -1,6 +1,9 @@
 const listItems = document.querySelectorAll('.list-item');
 
-listItems.forEach(item => item.addEventListener('click', () => {
-	const color = item.textContent.toLowerCase();
-	item.style.color = color;
-}));
+// Add an event handler 'сlick' to each list item
+listItems.forEach(listItem => {
+	listItem.addEventListener('click', () => {
+		const color = listItem.textContent.toLowerCase();
+		listItem.style.color = color;
+	});
+});
