@@ -1,9 +1,10 @@
 const listItems = document.querySelectorAll('.list-item');
 
-listItems.forEach(item => item.addEventListener('click', handleClick));
+// Add an event handler for each list item
+listItems.forEach(listItem => listItem.addEventListener('click', () => changeColorOnClick(listItem)));
 
-// Function to mouse click event handler
-function handleClick() {
-	const color = this.textContent.toLowerCase();
-	this.style.color = color;
-}
+// Function to mouse click an event handler
+function changeColorOnClick(listItem) {
+	const color = listItem.textContent.toLowerCase();
+	listItem.style.color = color;
+};
